@@ -1,0 +1,64 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 15, 2018 at 07:52 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `hospital`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient`
+--
+
+CREATE TABLE `patient` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `age` varchar(10) NOT NULL,
+  `dob` varchar(100) NOT NULL,
+  `gender` char(1) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `message` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`id`, `firstname`, `lastname`, `age`, `dob`, `gender`, `phone`, `message`) VALUES
+(4, 'Waheed', 'PAsha', '24', 'Apr 11, 2018', 'm', '9663413886', 'hello'),
+(5, 'Ramesh', 'Patil', '12', 'Apr 25, 2018', 'f', '9663413771', 'hello world'),
+(6, 'Rahul', 'Gem', '23', 'Apr 30, 2018', 'm', '8897556234', 'Hi'),
+(7, 'Fahad', 'KHAN', '25', 'Mar 07, 2018', 'm', '8776341556', 'HI'),
+(8, 'Sunil', 'shetty', '12', 'Apr 24, 2018', 'm', '1234567890', 'as'),
+(9, 'sneha', 'khana', '23', 'Apr 29, 2018', 'f', '1234567890', 'hi');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `patient`
+--
+ALTER TABLE `patient`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `patient`
+--
+ALTER TABLE `patient`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
