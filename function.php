@@ -1,5 +1,6 @@
 <?php 
-$con =  mysqli_connect('localhost','waheed','waheed123','hospital');
+//$con =  mysqli_connect('localhost','waheed','waheed123','hospital');
+$con =  mysqli_connect('localhost','id5420298_waheed','waheed123','id5420298_hospital');
 if(!$con){
 	echo ' not connected';
 
@@ -35,7 +36,11 @@ if(isset($_POST['search_value'])){
             <td>' . $row['id'] .'</td>
             <td>'.$row['firstname'] . '</td>
             <td>'.$row['lastname'] . '</td>
+            <td>'. $row['age'] . ' </td>
+            <td>'. $row['dob'] . ' </td>
+            <td>'. $row['gender'] . ' </td>
             <td>'. $row['phone'] . ' </td>
+            <td>'. $row['message'] . ' </td>
           </tr>';
 	}
 }

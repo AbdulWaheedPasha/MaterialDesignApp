@@ -1,3 +1,4 @@
+  <?php include('function.php');?>
   <!DOCTYPE html>
   <html>
     <head>
@@ -31,13 +32,17 @@
               <th>ID</th>
               <th>First Name</th>
               <th>Last Name</th>
-              <th>Mobile</th>
+              <th>Age</th>
+              <th>DoB</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Message</th>
           </tr>
         </thead>
 
         <tbody id="result">
             <?php 
-            $con =  mysqli_connect('localhost','id5420298_waheed','waheed123','id5420298_hospital');
+
 
             $sql = "SELECT * from patient";
             $result = mysqli_query($con,$sql);
@@ -47,7 +52,11 @@
             <td><?php echo $row['id'];?></td>
             <td><?php echo $row['firstname'];?></td>
             <td><?php echo $row['lastname'];?></td>
+            <td><?php echo $row['age'];?></td>
+            <td><?php echo $row['dob'];?></td>
+            <td><?php echo $row['gender'];?></td>
             <td><?php echo $row['phone'];?></td>
+            <td><?php echo $row['message'];?></td>
           </tr>
           <?php } ?>
        
